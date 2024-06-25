@@ -20,12 +20,12 @@ type Story = {
   kids: number[];
 };
 
-interface IMatchParams {
+type MatchParams = {
   id: string;
-}
+};
 
 export default function Details() {
-  const { id } = useParams<IMatchParams>();
+  const { id } = useParams<MatchParams>();
   const [story, setStory] = useState<Story | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
 
